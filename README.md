@@ -1,15 +1,30 @@
-# Header 1 #
+# Sudoku Solver #
 
 Basic sudoku solver written in c++ language.
 
 ## Design Principles ##
 
 * Implements a version of the Dancing Links algorithm (DLX)
-* 9x9 array used for solving puzzle
+* 9x9 array used for final solution of puzzle
+* Uses a 324x729 grid for
+
 
 ## Dancing Links ##
 
 Matrix will be populated with constraints(columns) and rows(choices).
+
+A sudoku has 4 constraints that apply to each of its 81 fields:
+* Position: Only 1 number per cell
+* Row: only one of each number per row
+* Column: only one of each number per column
+* Grid: only one of each number per 3x3 grid
+
+This gives us 4x81 = 324 columns
+
+Each row represents every single possible permutation for every number (i.e., every number 1-9 in space 0-80). Each row will have exactly 4 1's present (corresponding to the 4 constraints).
+
+This gives us 9x81 = 729 rows
+
 
 Variables required: *level, branch, col_sel, row_sel, col_tot[],*
 
