@@ -26,7 +26,8 @@ Each row represents every single possible permutation for every number (i.e., ev
 This gives us 9x81 = 729 rows
 
 
-Variables required: *level, branch, col_sel, row_sel, col_tot[],*
+Variables required: *level, branch*
+
 
 ### Constraints (explained) ###
 
