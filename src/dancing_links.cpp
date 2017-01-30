@@ -3,36 +3,27 @@
 #include <iostream>
 //#include <string>
 
-#define LENGTH 8
-#define GRID 80
 
 using namespace std;
 
-class node {
+// Generic data object for all the linked nodes
+class Node {
   public:
-    int data;
-    node *up;
-    node *down;
-    node *left;
-    node *right;
-
-    void cover() {
-
-    }
-    void uncover() {
-
-    }
-};
-
-class colNode: public node {
-  public:
-    int size;
+    Node(node *l, node *r, node *u = NULL, node *d = NULL, char n = "");
+  private:
+    Node *left;
+    Node *right;
+    Node *up; //Data & column nodes only
+    Node *down;
+    int size = 0; //Column nodes only
     char name[];
-
-
 };
 
-class subNode: public node {
-  public:
-    colNode column;
-};
+Node::Node(node *l, node *r, node *u = 0, node *d = 0, char n = "") {
+  *left = *l;
+  *right = *r;
+  *up = *u;
+  *down = *d;
+  size = s
+  name = n
+}

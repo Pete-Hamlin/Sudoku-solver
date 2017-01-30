@@ -6,7 +6,8 @@ Basic sudoku solver written in c++ language.
 
 * Implements a version of the Dancing Links algorithm (DLX)
 * 9x9 array used for final solution of puzzle
-* Uses a 324x729 grid for
+* Uses a 324x729 matrix consisting of only 1 and null values to solve the exact cover problem presented by the sudoku
+*
 
 
 ## Dancing Links ##
@@ -37,24 +38,20 @@ Variables required: *level, branch*
 * Trailing number represents field of constraint is to be filled
 * e.g. 1row4 represents a 1 input into row 4
 * Grids are always of the format:  
+
   0 1 2  
   3 4 5  
   6 7 8  
 
 ### Choices (explained) ###
 
-`1..900..80`
+`1..91..91..9`
 * First digit is input number 1-9
-* Last 2 digits represent the cell number (0-80)
-* e.g. 524 is the number 5 entered into cell 24
-* Cells are in the format:  
+* Second digit represents row placement from 1-9
+* Third digit represents column placement from 1-9
+* e.g. 524 is the number 5 entered into row 2, column 4
 
-  00 01 02 03 04 05 06 07 08  
-  09 10 11 12 13 14 15 16 17  
-  18 19 20 21 22 23 24 25 26  
-  27 28 29 30 31 32 33 34 35  
-  36 37 38 39 40 41 42 43 44  
-  45 46 47 48 49 50 51 52 53  
-  54 55 56 57 58 59 60 61 62  
-  63 64 65 66 67 68 69 70 71  
-  72 73 74 75 76 77 78 79 80  
+## Reference Material ##
+
+Java implementation of dancing link algorith:
+https://www.ocf.berkeley.edu/~jchu/publicportal/sudoku/sudoku.paper.html#ExactCover

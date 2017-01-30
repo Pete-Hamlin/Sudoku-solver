@@ -5,7 +5,8 @@
 using namespace std;
 
 //Globals
-
+#define LENGTH 8
+#define GRID 80
 
 //Functions
 
