@@ -1,12 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include <string>
+
+//#include "links.h"
 
 using namespace std;
 
 //Globals
-#define LENGTH 8
-#define GRID 80
 
 //Functions
 

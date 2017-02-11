@@ -1,29 +1,41 @@
 //Define all dancing links algorithm/node related elements here
 
+//Standard includes
 #include <iostream>
-//#include <string>
-
-
+#include <string>
+#include <cmath>
+#include <stdlib.h>
 using namespace std;
 
-// Generic data object for all the linked nodes
-class Node {
-  public:
-    Node(node *l, node *r, node *u = NULL, node *d = NULL, char n = "");
-  private:
-    Node *left;
-    Node *right;
-    Node *up; //Data & column nodes only
-    Node *down;
-    int size = 0; //Column nodes only
-    char name[];
-};
+//Private includes
+#include "links.h"
 
-Node::Node(node *l, node *r, node *u = 0, node *d = 0, char n = "") {
-  *left = *l;
-  *right = *r;
-  *up = *u;
-  *down = *d;
-  size = s
-  name = n
+/* ColHeader */
+
+//Constructor
+ColHeader::ColHeader(ColHeader *l, ColHeader *r) {
+  *_left = *l;
+  *_right = *r;
+}
+
+/* DataNode */
+
+//Constructor
+DataNode::DataNode(DataNode *l, DataNode *r, DataNode *u, DataNode *d, ColHeader *c) {
+  *_left = *l;
+  *_right = *r;
+  *_up = *u;
+  *_down = *d;
+  *_col = *c;
+}
+
+/*ColNode */
+
+ColNode::ColNode(DataNode *l, DataNode *r, DataNode *u, DataNode *d, ColHeader *c, string n) {
+  *_left = *l;
+  *_right = *r;
+  *_up = *u;
+  *_down = *d;
+  *_col = *c;
+  _name = n;
 }

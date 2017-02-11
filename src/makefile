@@ -1,11 +1,20 @@
-CPP=g++
-RM=rm -f
+CC=g++
+CFLAGS=-c -Wall
+LDFLAGS=
 
 SRC=main.cpp dancing_links.cpp
-OBJ=solve
+OBJ=$(SRC:.cpp=.o)
+TARGET=solve
 
-solve: $(SRC)
-	$(CPP) -o $(OBJ) $(SRC)
+RM=rm -f
+
+all: $(SRC) $(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CC) $(LDFLAGS) $(OBJ) -o $@
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(TARGET) $(OBJ)
