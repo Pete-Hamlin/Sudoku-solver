@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=
 
-SRC=main.cpp dancing_links.cpp
+SRC=main.cpp dancing_links.cpp functions.cpp
 OBJ=$(SRC:.cpp=.o)
 TARGET=solve
 

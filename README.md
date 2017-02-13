@@ -1,6 +1,6 @@
 # Sudoku Solver #
 
-Basic sudoku solver written in c++ language.
+Basic sudoku solver written in c++ language. Made mostly as a practice to implementing a backtracking algorithm in a low-mid level language. 
 
 ## Design Principles ##
 

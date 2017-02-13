@@ -1,2 +1,4 @@
 src/solve
+src/*.o
 # example4x4.xls
+design
