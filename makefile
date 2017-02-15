@@ -1,10 +1,12 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=
+VPATH=src
+BINDIR=bin
 
-SRC=main.cpp dancing_links.cpp functions.cpp
+SRC= main.cpp functions.cpp dancing_links.cpp
 OBJ=$(SRC:.cpp=.o)
-TARGET=solve
+TARGET=$(BINDIR)/solve
 
 RM=rm -f
 
