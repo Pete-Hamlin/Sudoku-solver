@@ -1,4 +1,4 @@
-//Define all dancing links algorithm/node related elements here
+//Define all dancing links algorithm/Node related elements here
 
 //Standard includes
 #include <iostream>
@@ -10,40 +10,39 @@ using namespace std;
 //Private includes
 #include "links.h"
 
-/* ColHeader */
+/* Node` */
 
-//Constructor
-/*
-ColHeader::ColH/eader(ColHeader *l, ColHeader *r) {
-  *_left = *l;
-  *_right = *r;
+//Set values
+void Node::setLeft (Node left) {
+  *_left = left;
 }
-*/
+
+void Node::setRight (Node right) {
+  *_right = right;
+}
+
+/* colHeader */
+
 
 
 /* DataNode */
 
-//Constructor
-/*
-DataNode::DataNode(DataNode *l, DataNode *r, DataNode *u, DataNode *d, ColHeader *c) {
-  *_left = *l;
-  *_right = *r;
-  *_up = *u;
-  *_down = *d;
-  *_col = *c;
+//Set values
+void DataNode::setUp (Node up) {
+  *_up = up;
 }
-*/
+
+void DataNode::setDown (Node down) {
+  *_down = down;
+}
+
+void DataNode::SetHeader(ColHeader col) {
+  *_col = col;
+}
+
 
 /*ColNode */
 
-//Constructor`
-/*
-ColNode::ColNode(DataNode *l, DataNode *r, DataNode *u, DataNode *d, ColHeader *c, string n) {
-  *_left = *l;
-  *_right = *r;
-  *_up = *u;
-  *_down = *d;
-  *_col = *c;
-  _name = n;
+void ColNode::setName (string name) {
+  _name = name;
 }
-*/

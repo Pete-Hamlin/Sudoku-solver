@@ -1,7 +1,7 @@
 CC=g++
-CFLAGS=-c -Wall
-LDFLAGS=
-VPATH=src
+CFLAGS=-c -Wall -g
+LDFLAGS= -g
+VPATH=src:
 BINDIR=bin
 
 SRC= main.cpp functions.cpp dancing_links.cpp
