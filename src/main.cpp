@@ -22,20 +22,28 @@ const int GRIDSQUARE = iPow(GRIDSIZE, 2);
 
 int main() {
   //Variables
-  int i = 0, j = GRIDSQUARE, k = GRIDSQUARE*2, l = GRIDSQUARE*3, candidate = 0, zoneCount=0, zoneLevel=0, count;   //Iterators
-  //DataNode matrix[ROW][COLUMN];
-  ColHeader lines[ROW];
-  ColHeader *temp = new ColHeader;
-  genHeaders(lines);
+  int i = 0, j = GRIDSQUARE, k = GRIDSQUARE*2, l = GRIDSQUARE*3, cand = 1, zoneCount=0, zoneLevel=0, countY, countX;   //Iterators
+  int matrix[ROW][COLUMN];
+  //ColHeader lines[ROW];
+  //ColHeader *temp = new ColHeader;
+  //genHeaders(lines);
+  Node *head = NULL;
+  Node *temp;
+  temp = new Node;
+
 
   cout << ROW << endl;
   cout << COLUMN << endl;             //DEBUG
 
   //Build exact cover matrix
-  for (count = 1; count <= ROW; count++) {
+  for (countY = 1; countY <= ROW; countY++) {
     //Replace this section with actual program logic
+    //genNode (i, ROW, cand)
+    //genNode (j, ROW, cand)
+    //genNode (k, ROW, cand)
+    //genNode (l, ROW, cand)
 /*
-    cout << candidate << " ";
+    cout << cand << " ";
     cout << i << " ";
     cout << j << " ";
     cout << k << " ";
@@ -45,12 +53,12 @@ int main() {
     j++;
     k++;
     l++;
-    candidate++;
-    if (count % GRIDSIZE == 0) {
-      candidate = 0;
+    cand++;
+    if (countY % GRIDSIZE == 0) {
+      cand = 1;
       i++;                                                                      //Restraint 1 rule - Number in every cell
-      j = GRIDSQUARE + (count/GRIDSQUARE)*GRIDSIZE;                             //Restraint 2 rule - No duplicates per row
-      k = GRIDSQUARE*2 + count % GRIDSQUARE;                                    //Restraint 3 rule - No duplicates per column
+      j = GRIDSQUARE + (countY/GRIDSQUARE)*GRIDSIZE;                             //Restraint 2 rule - No duplicates per row
+      k = GRIDSQUARE*2 + countY % GRIDSQUARE;                                    //Restraint 3 rule - No duplicates per column
       //Annoying zone dependant logic
       if (zoneCount < ZONESIZE-1) {
         zoneCount ++;
@@ -58,7 +66,7 @@ int main() {
       else {
         zoneCount = 0;
       }
-      zoneLevel = count/(GRIDSQUARE*ZONESIZE);
+      zoneLevel = countY/(GRIDSQUARE*ZONESIZE);
       l = GRIDSQUARE*3 + GRIDSIZE*zoneCount + zoneLevel*(GRIDSQUARE/ZONESIZE);  //Restraint 4 rule - No dulicates per zone
     }
 

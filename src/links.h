@@ -1,4 +1,4 @@
-//Inlude guard
+//Include guard
 #ifndef __LINKS_H_INCLUDED__
 #define __LINKS_H_INCLUDED__
 
@@ -13,7 +13,6 @@ class Node {
     Node *_left;
     Node *_right;
 
-    int _col;
 };
 
 
@@ -23,15 +22,20 @@ class ColHeader : public Node {};
 // Main data elements of the matrix (represent a '1' field)
 class DataNode : public Node {
   public:
+    void setRow(int row);
+    void setCol(int col);
+    void setCand(int cand);
+
     void setUp(Node up);
     void setDown(Node down);
-    void SetHeader(ColHeader col);
+    void SetHeader(ColHeader column);
   protected:
     Node *_up;
     Node *_down;
-    ColHeader *_col;
+    ColHeader *_column;
 
     int _row;
+    int _col;
     int _cand;
   };
 

@@ -32,3 +32,7 @@ void genHeaders(ColHeader header[]) {
     header[i].setRight(header[i+1]);
   }
 }
+
+void genNode(int row, int col, int cand) {
+  
+}

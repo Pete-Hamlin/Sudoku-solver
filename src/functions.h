@@ -9,5 +9,6 @@ extern const int ROW;
 
 int iPow(int base, int exp);
 void genHeaders(ColHeader header[]);
+Node genNode(int row, int col, int cand);
 
 #endif
