@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 #include "links.h"
+#include "lists.h"
 #include "functions.h"
 
 using namespace std;
@@ -24,13 +25,15 @@ int main() {
   //Variables
   int i = 0, j = GRIDSQUARE, k = GRIDSQUARE*2, l = GRIDSQUARE*3, cand = 1, zoneCount=0, zoneLevel=0, countY, countX;   //Iterators
   int matrix[ROW][COLUMN];
+  /*
+  Column cols[COLUMN];
+  for (countX = 0; countX < COLUMN; countX++) {
+    cols[countX] = new Column;
+  }
+  */
   //ColHeader lines[ROW];
   //ColHeader *temp = new ColHeader;
   //genHeaders(lines);
-  Node *head = NULL;
-  Node *temp;
-  temp = new Node;
-
 
   cout << ROW << endl;
   cout << COLUMN << endl;             //DEBUG

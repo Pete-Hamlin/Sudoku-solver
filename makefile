@@ -4,7 +4,7 @@ LDFLAGS= -g
 VPATH=src:
 BINDIR=bin
 
-SRC= main.cpp functions.cpp dancing_links.cpp
+SRC= main.cpp functions.cpp dancing_links.cpp lists.cpp
 OBJ=$(SRC:.cpp=.o)
 TARGET=$(BINDIR)/solve
 
