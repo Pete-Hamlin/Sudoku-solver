@@ -12,50 +12,19 @@ using namespace std;
 
 /* Node` */
 
-//Set values
-void Node::setLeft (Node left) {
-  *_left = left;
+Node::Node() {
+  _up = NULL;
+  _down = NULL;
+  _left = NULL;
+  _right = NULL;
+  _col = NULL;
 }
 
-void Node::setRight (Node right) {
-  *_right = right;
-}
+// functions
 
-/* colHeader */
-
-
-
-/* DataNode */
-
-//Set values
-
-void DataNode::setRow(int row) {
-  _row = row;
-}
-
-void DataNode::setCol(int col) {
-  _col = col;
-}
-
-void DataNode::setCand(int cand) {
-  _cand = cand;
-}
-
-void DataNode::setUp (Node up) {
-  *_up = up;
-}
-
-void DataNode::setDown (Node down) {
-  *_down = down;
-}
-
-void DataNode::SetHeader(ColHeader column) {
-  *_column = column;
-}
-
-
-/*ColNode */
-
-void ColNode::setName (string name) {
-  _name = name;
+void Node::cover() {
+  _left->_right = _right;
+  _right->_left = _left;
+  _up->_down = _down;
+  _down->_up = _up;
 }

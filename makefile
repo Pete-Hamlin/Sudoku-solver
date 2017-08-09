@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-c -Wall -g
+CFLAGS= -std=c++11 -c -Wall -g
 LDFLAGS= -g
 VPATH=src:
 BINDIR=bin
