@@ -35,4 +35,22 @@ class Node {
 //     string _name;
 // };
 
+// Provides various methods for building/solving the exact cover matrix
+class Solution {
+    public:
+        Solution(int zoneSize, int row, int col);
+        void buildCols();
+        void populate();
+        void insert(int column);
+        //void insert();
+        //void clean();
+
+        int _zoneSize;
+        int _gridSize;
+        int _row;
+        int _col;
+        int _gridsquare;
+        Node *_head;
+};
+
 #endif
